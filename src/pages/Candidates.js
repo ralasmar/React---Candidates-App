@@ -47,9 +47,10 @@ export function Candidates(props){
         <>
             <h1 className="candidates-heading">Candidates</h1>
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} onSearchResults={setCandidates} />
-            <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
-            <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
-
+            <div className="form-and-list">
+                <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
+                <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
+            </div>
             <Routes>
                 <Route path="/candidates/*" element={<CandidateLayout />} />
             </Routes>

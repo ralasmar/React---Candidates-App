@@ -28,12 +28,26 @@ body {
 
 }
 
+label{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top:80px;
+    margin-bottom: 0px
+}
+
 form{
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: left; 
     padding-top: 8px;
     padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100vh;
+    background-color: black;
+    width: 350px;
+    box-shadow: 8px 8px 4px 2px rgba(0, 0, 255, .2);
     
 }
 
@@ -42,35 +56,41 @@ form.dark{
 }
 
 .form-name{
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
+    margin-top: 20px;
     width: 300px;
     height: 30px;
     border-radius: 8px;
 }
 
 .form-location{
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
     width: 300px;
     height: 30px;
     border-radius: 8px;
 }
 
 .form-bio{
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
     width: 300px;
     height: 30px;
     border-radius: 8px;
 }
 
 .form-skills{
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
     width: 300px;
     height: 30px;
     border-radius: 8px;
 }
 
 .form-expertise{
-    margin: 5px;
+    margin: 10px;
+    align-items: center;
     width: 300px;
     height: 30px;
     border-radius: 8px;
@@ -85,6 +105,13 @@ form.dark{
     cursor: pointer;
     margin-top: 5px;
     width: 100px;
+    margin-left: 120px;
+}
+
+.form-and-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .candidate-card{
@@ -96,13 +123,14 @@ form.dark{
     background-color: white;
     border: solid red 4px;
     height: 200px;
-    width: 400px;
+    width: 345px;
     margin: 20px;
     margin-bottom: 5px;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
 }
+
 .candidate-card:active{
     font-weight: bold;
     display: flex;
@@ -111,7 +139,8 @@ form.dark{
     align-items: center;
     background-color: white;
     border: solid red 4px;
-    min-height: 60px;
+    height: 200px;
+    width: 345px;
     margin: 20px;
     margin-bottom: 5px;
     border-radius: 20px;
@@ -123,6 +152,13 @@ form.dark{
    outline: none;
 }
 
+.candidate-card:hover{
+    -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px #c54545;
+   
+}
+
 .candidate-name{
     font-weight: bold;
     margin-bottom: 10px;
@@ -130,7 +166,7 @@ form.dark{
     width: 100%;
     padding: 10px;
     color: white;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 
 .btn-danger {

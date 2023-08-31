@@ -25,6 +25,7 @@ function handleSubmit(event){
 
 return (
     <form className={props.darkMode ? "dark": ""} onSubmit={handleSubmit}>
+        <label htmlFor="form">Add a Candidate</label>
         <input
             className="form-name"
             value={newCand.name}
