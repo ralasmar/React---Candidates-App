@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { Route, Routes } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { CandidateForm } from '../components/CandidateForm'
 import { CandidateList } from '../components/CandidateList'
+import { CandidateRoutes } from '../CandidateRoutes'
+import { CandidateLayout } from '../CandidateLayout'
 
 export function Candidates(){
     const [darkMode, setDarkMode] = React.useState(false)
@@ -32,7 +35,10 @@ export function Candidates(){
 
     function deleteCandidate(id){
         setCandidates(currentCandidates => {
-            return currentCandidates.filter(candidate => candidate.id !== id)
+            const updatedCandidates = currentCandidates.filter(candidate => candidate.id !== id)
+
+            localStorage.setItem("CANDIDATES", JSON.stringify(updatedCandidates))
+            return updatedCandidates
         })
         alert("Candidate removed from database")
     }
@@ -43,6 +49,10 @@ export function Candidates(){
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
             <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
+
+            <Routes>
+                <Route path="/candidates/*" element={<CandidateLayout />} />
+            </Routes>
         </>
     ) 
     

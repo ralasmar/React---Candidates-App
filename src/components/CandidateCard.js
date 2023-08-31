@@ -1,19 +1,23 @@
+import { Link } from "react-router-dom"
 
 export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
     
     return (
         <section key={id}>
+            <Link to={`/candidates/${id}`}>
             <div className="candidate-card">
-                {name}
+                <section className="candidate-name">
+                    <strong >{name}</strong>
+                </section>
+                Location: {location}
                 <br />
-                {location}
+                Bio: {bio}
                 <br />
-                {bio}
+                Skills: {skills}
                 <br />
-                {skills}
-                <br />
-                {expertise}
+                Level: {expertise}
             </div>
+            </Link>
 
             <button onClick={() =>deleteCandidate(id)} className="btn btn-danger">Delete</button>
         </section>

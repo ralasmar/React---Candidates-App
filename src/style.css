@@ -28,14 +28,13 @@ body {
 
 }
 
-
-
 form{
     display: flex;
     flex-direction: column;
     align-items: center; 
     padding-top: 8px;
     padding-bottom: 20px;
+    
 }
 
 form.dark{
@@ -44,18 +43,37 @@ form.dark{
 
 .form-name{
     margin: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
 }
 
 .form-location{
     margin: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
 }
 
 .form-bio{
     margin: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
 }
 
 .form-skills{
     margin: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.form-expertise{
+    margin: 5px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
 }
 
 .add-btn{
@@ -66,9 +84,25 @@ form.dark{
     padding: 5px;
     cursor: pointer;
     margin-top: 5px;
+    width: 100px;
 }
 
 .candidate-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: solid red 4px;
+    min-height: 60px;
+    margin: 20px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+}
+.candidate-card:active{
     font-weight: bold;
     display: flex;
     padding: 40px;
@@ -80,9 +114,22 @@ form.dark{
     margin: 20px;
     margin-bottom: 5px;
     border-radius: 20px;
-    border-radius: 50px;
     cursor: pointer;
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+.candidate-name{
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
 }
 
 .btn-danger {
