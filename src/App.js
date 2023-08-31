@@ -12,10 +12,10 @@ function App() {
     <BrowserRouter>
         <nav>
             <ul>
-                <li><NavLink to="/">Home</NavLink></li>
+                <NavLink to="/">Home</NavLink>
             </ul>
             <ul>
-                <li><NavLink to="/candidates">Candidates</NavLink></li>
+                <NavLink to="/candidates">Candidates</NavLink>
             </ul>
         </nav>
         

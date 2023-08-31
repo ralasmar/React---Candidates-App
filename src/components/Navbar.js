@@ -1,5 +1,5 @@
 import React from "react"
-//import { Searchbar } from "./Searchbar"
+import { Searchbar } from "./Searchbar"
 
 
 
@@ -7,7 +7,7 @@ export function Navbar(props){
 
     return(
         <nav className={props.darkMode ? "dark": ""}>
-            {/* <Searchbar darkMode={props.darkMode} onSearchResults={props.onSearchResults} /> */}
+            <Searchbar darkMode={props.darkMode} onSearchResults={props.onSearchResults} />
             <div className="toggler">
                 <p className="toggler--light">Light</p>
                 <div className="toggler--slider" onClick={props.toggleDarkMode}>

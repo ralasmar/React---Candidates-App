@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Navbar } from "../components/Navbar"
 
 
@@ -8,10 +8,12 @@ export function Home(){
     function toggleDarkMode(){
         setDarkMode(prevMode => !prevMode)
     }
-    
+
+
+
    return (
     <>
-        <h1 className='app-heading'>Candidate Database</h1>
+        <h1 className='app-heading'>Home</h1>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </>
    
