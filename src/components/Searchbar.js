@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import { Card } from "./Card"
+import { CandidateCard } from "./CandidateCard"
 
 export function Searchbar(props){
   const [query, setQuery] = useState("");
@@ -10,11 +10,11 @@ export function Searchbar(props){
     let results = [];
 
       
-     const items = JSON.parse(localStorage.getItem("CARDS"))
+     const items = JSON.parse(localStorage.getItem("CANDIDATES"))
      console.log(items)
 
     for(let i=0; i < items.length; i++){
-      if (items[i] && items[i].name && items[i].name.city.toLowerCase().includes(query.toLowerCase())){
+      if (items[i] && items[i].name && items[i].name.skills.toLowerCase().includes(query.toLowerCase())){
         console.log("HELLLO??")
         results.push(items[i]);
       }
@@ -33,7 +33,7 @@ export function Searchbar(props){
         onChange={(e) => {setQuery(e.target.value);
         console.log("Input value:", e.target.value);
         }}
-        placeholder='Search'/>
+        placeholder='Search for a skill'/>
       <button 
         className="search-btn" 
         type="submit"

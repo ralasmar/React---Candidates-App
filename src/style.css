@@ -95,7 +95,8 @@ form.dark{
     align-items: center;
     background-color: white;
     border: solid red 4px;
-    min-height: 60px;
+    height: 200px;
+    width: 400px;
     margin: 20px;
     margin-bottom: 5px;
     border-radius: 20px;
@@ -129,7 +130,7 @@ form.dark{
     width: 100%;
     padding: 10px;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px;;
 }
 
 .btn-danger {

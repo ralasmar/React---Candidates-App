@@ -12,7 +12,7 @@ export function CandidateRoutes(){
         <Routes>
             <Route element={<CandidateLayout />}>
                 <Route index element={<CandidateList />} />
-                <Route path="/candidate/:id" element={<CandidateCard />} />
+                <Route path=":id" element={<CandidateCard />} />
             </Route>
         </Routes>
         </>

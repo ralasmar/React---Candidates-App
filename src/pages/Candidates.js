@@ -6,7 +6,7 @@ import { CandidateList } from '../components/CandidateList'
 import { CandidateRoutes } from '../CandidateRoutes'
 import { CandidateLayout } from '../CandidateLayout'
 
-export function Candidates(){
+export function Candidates(props){
     const [darkMode, setDarkMode] = React.useState(false)
 
     function toggleDarkMode(){
@@ -46,7 +46,7 @@ export function Candidates(){
     return (
         <>
             <h1 className="candidates-heading">Candidates</h1>
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} onSearchResults={setCandidates} />
             <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
             <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
 

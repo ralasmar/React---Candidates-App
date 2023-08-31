@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
+import { CandidateLayout } from "../CandidateLayout"
 
 export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
     
@@ -18,6 +19,9 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                 Level: {expertise}
             </div>
             </Link>
+            <Routes>
+                <Route path="/candidates/*" element={<CandidateLayout />}/>
+            </Routes>
 
             <button onClick={() =>deleteCandidate(id)} className="btn btn-danger">Delete</button>
         </section>
