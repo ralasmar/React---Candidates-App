@@ -23,6 +23,12 @@ body {
     color: black;
 }
 
+.profile-heading{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
 .home-image {
     width: 100%;
 

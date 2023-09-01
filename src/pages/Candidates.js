@@ -22,10 +22,10 @@ export function Candidates(props){
         return JSON.parse(localValue)
     })
 
-    function addCandidate(name, location, bio, skills){
+    function addCandidate(name, location, bio, skills, expertise){
         setCandidates(currentCandidates => {
             const newCandidates = [
-                { id: crypto.randomUUID(), name, location, bio, skills },
+                { id: crypto.randomUUID(), name, location, bio, skills, expertise },
                 ...currentCandidates
             ]
             localStorage.setItem("CANDIDATES", JSON.stringify(newCandidates))
@@ -56,9 +56,9 @@ export function Candidates(props){
                     <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
                 </div>
             </div>
-            <Routes>
+            {/* <Routes>
                 <Route path="/candidates/:id" element={<CandidateLayout />} />
-            </Routes>
+            </Routes> */}
         </>
     ) 
     

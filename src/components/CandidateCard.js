@@ -1,7 +1,9 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { Link, Route, Routes, useOutletContext } from "react-router-dom"
 import { CandidateLayout } from "../CandidateLayout"
 
+
 export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
+
     
     return (
         <section key={id}>
