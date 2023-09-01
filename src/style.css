@@ -52,7 +52,10 @@ form{
 }
 
 form.dark{
-    background-color: black;
+    background-color: red;
+    -moz-box-shadow: 20px 0 40px #ccc;
+      -webkit-box-shadow: 60px 0 80px #ccc;
+      box-shadow: 20px 0 30px #ccc;
 }
 
 .form-name{
@@ -60,7 +63,7 @@ form.dark{
     align-items: center;
     margin-top: 20px;
     width: 300px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
 }
 
@@ -68,7 +71,7 @@ form.dark{
     margin: 10px;
     align-items: center;
     width: 300px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
 }
 
@@ -76,7 +79,7 @@ form.dark{
     margin: 10px;
     align-items: center;
     width: 300px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
 }
 
@@ -84,7 +87,7 @@ form.dark{
     margin: 10px;
     align-items: center;
     width: 300px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
 }
 
@@ -92,7 +95,7 @@ form.dark{
     margin: 10px;
     align-items: center;
     width: 300px;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
 }
 
@@ -297,8 +300,8 @@ nav.dark .toggler--slider {
 #search-bar {
     display: flex;
     justify-content: left;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
 
 }
 

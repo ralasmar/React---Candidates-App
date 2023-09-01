@@ -57,7 +57,7 @@ export function Candidates(props){
                 </div>
             </div>
             <Routes>
-                <Route path="/candidates/*" element={<CandidateLayout />} />
+                <Route path="/candidates/:id" element={<CandidateLayout />} />
             </Routes>
         </>
     ) 

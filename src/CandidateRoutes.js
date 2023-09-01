@@ -5,16 +5,14 @@ import { CandidateCard } from "./components/CandidateCard"
 import { CandidateLayout } from "./CandidateLayout"
 
 
-export function CandidateRoutes(){
-    return (
-        <>
-        <CandidateLayout />
-        <Routes>
-            <Route element={<CandidateLayout />}>
-                <Route index element={<CandidateList />} />
-                <Route path=":id" element={<CandidateCard />} />
-            </Route>
-        </Routes>
-        </>
-    )
-}
+// export function CandidateRoutes(){
+//     return (
+//         <>
+//         <CandidateLayout />
+//         <Routes>
+//             {/* <Route index element={<CandidateList />} /> */}
+//             <Route path="/candidates/:id" element={<CandidateLayout />} />
+//         </Routes>
+//         </>
+//     )
+// }
