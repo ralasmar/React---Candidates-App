@@ -25,21 +25,21 @@ export function Searchbar(props){
   
   return (
     <div  id="search-bar" className={props.darkMode ? "dark": ""}>
-    <div style={{ display:'flex', flexDirection: 'row', margin: '4px' }}>
-     <input 
-        className='search-bar' 
-        type="text" 
-        value={query}
-        onChange={(e) => {setQuery(e.target.value);
-        console.log("Input value:", e.target.value);
-        }}
-        placeholder='Search for a skill'/>
-      <button 
-        className="search-btn" 
-        type="submit"
-         onClick={() => handleSearch(query)}
-      >Go</button>
-    </div>
+      <div style={{ display:'flex', flexDirection: 'row', margin: '4px' }}>
+      <input 
+          className='search-bar' 
+          type="text" 
+          value={query}
+          onChange={(e) => {setQuery(e.target.value);
+          console.log("Input value:", e.target.value);
+          }}
+          placeholder='Search for a skill'/>
+        <button 
+          className="search-btn" 
+          type="submit"
+          onClick={() => handleSearch(query)}
+        >Go</button>
+      </div>
     </div>
   )
 }

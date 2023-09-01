@@ -9,16 +9,7 @@ import { Candidates } from './pages/Candidates'
 function App() {
     
     return (
-    <BrowserRouter>
-        <nav>
-            <ul>
-                <NavLink to="/">Home</NavLink>
-            </ul>
-            <ul>
-                <NavLink to="/candidates">Candidates</NavLink>
-            </ul>
-        </nav>
-        
+    <BrowserRouter>  
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/candidates" element={<Candidates />} />

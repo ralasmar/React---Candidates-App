@@ -5,6 +5,7 @@ import { CandidateForm } from '../components/CandidateForm'
 import { CandidateList } from '../components/CandidateList'
 import { CandidateRoutes } from '../CandidateRoutes'
 import { CandidateLayout } from '../CandidateLayout'
+import { Searchbar } from '../components/Searchbar'
 
 export function Candidates(props){
     const [darkMode, setDarkMode] = React.useState(false)
@@ -47,9 +48,13 @@ export function Candidates(props){
         <>
             <h1 className="candidates-heading">Candidates</h1>
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} onSearchResults={setCandidates} />
+            
             <div className="form-and-list">
                 <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
-                <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
+                <div className="list-and-search">
+                    <Searchbar darkMode={darkMode} onSearchResults={setCandidates} />
+                    <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
+                </div>
             </div>
             <Routes>
                 <Route path="/candidates/*" element={<CandidateLayout />} />
