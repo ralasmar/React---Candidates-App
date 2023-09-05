@@ -15,9 +15,14 @@ export function Searchbar(props){
 
     for(let i=0; i < items.length; i++){
       if (items[i] && items[i].name && items[i].name.skills.toLowerCase().includes(query.toLowerCase())){
-        console.log("HELLLO??")
         results.push(items[i]);
-      }
+      } else if (items[i] && items[i].name.name.toLowerCase().includes(query.toLowerCase())){
+        results.push(items[i])
+      } else if (items[i] && items[i].name.location.toLowerCase().includes(query.toLowerCase())){
+        results.push(items[i])
+      } else if (items[i] && items[i].name && items[i].name.bio.toLowerCase().includes(query.toLowerCase())){
+        results.push(items[i])
+      } 
     }
     props.onSearchResults(results)
   }
@@ -33,7 +38,7 @@ export function Searchbar(props){
           onChange={(e) => {setQuery(e.target.value);
           console.log("Input value:", e.target.value);
           }}
-          placeholder='Search for a skill'/>
+          placeholder='Keyword Search'/>
         <button 
           className="search-btn" 
           type="submit"
