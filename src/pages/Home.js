@@ -16,7 +16,7 @@ export function Home(props){
     <>
         <h1 className='app-heading'>Home</h1>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <CandidateForm onSubmit={props.addCandidate} darkMode={props.darkMode}/>
+        {/* <CandidateForm onSubmit={props.addCandidate} darkMode={props.darkMode}/> */}
     </>
    
    )

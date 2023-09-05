@@ -7,7 +7,7 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
     
     return (
         <section key={id}>
-            <Link to={`/candidates/${id}`}>
+            <Link to={`/candidates/${id}/`}>
                 <div className="candidate-card">
                     <section className="candidate-name">
                         <strong >{name}</strong>
