@@ -27,13 +27,15 @@ export function CandidateLayout(props){
         <h1 className="profile-heading">Candidate Profile</h1>
         <Navbar darkMode={props.darkMode} toggleDarkMode={props.toggleDarkMode} />
         {candidate && (
-        <section className="profile-page" key={id}>
-            <strong className="profile-name">{candidate.name.name}</strong>
-            <p className="profile-location">Location: {candidate.name.location}</p>
-            <p classname="profile-level">Level: {candidate.name.expertise}</p>
-            <p className="proile-skills">Skills: {candidate.name.skills}</p>
-            <p className="profile-bio">Bio: {candidate.name.bio}</p>
-        </section>
+        <div className={props.darkMode ? "dark": ""}>
+            <section className="profile-page" key={id}>
+                <strong className="profile-name">{candidate.name.name}</strong>
+                <p className="profile-location"><strong>Location:</strong> {candidate.name.location}</p>
+                <p classname="profile-level"><strong>Level:</strong> {candidate.name.expertise}</p>
+                <p className="proile-skills"><strong>Skills:</strong> {candidate.name.skills}</p>
+                <p className="profile-bio"><strong>Bio:</strong> {candidate.name.bio}</p>
+            </section>
+        </div>
         )}
         
         </>

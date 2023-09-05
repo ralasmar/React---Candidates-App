@@ -7,14 +7,14 @@ import { CandidateLayout } from './CandidateLayout'
 
 
 
-function App() {
+function App(props) {
     
     return (
     <BrowserRouter>  
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/candidates" element={<Candidates />} />
-            <Route path="/candidates/:id" element={<CandidateLayout />} />
+            <Route path="/candidates/:id" element={<CandidateLayout darkMode={props.darkMode} />} />
         </Routes>
     </BrowserRouter> 
     )

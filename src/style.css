@@ -36,6 +36,10 @@ body {
     flex-direction: row;
 }
 
+.home-image{
+    border: solid red 8px;
+}
+
 .home-text {
     display: flex;
     flex-direction: column;
@@ -373,6 +377,11 @@ nav.dark .toggler--slider {
     flex-direction: column;
     align-items: left;
     padding-left: 10px;
+}
+
+div.dark {
+    background-color: black;
+    color: white;
 }
 
 .profile-name {
