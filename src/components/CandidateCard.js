@@ -13,8 +13,8 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                         <strong >{name}</strong>
                     </section>
                     Location: {location}
-                    <br />
-                    Bio: {bio}
+                    {/* <br />
+                    Bio: {bio} */}
                     <br />
                     Skills: {skills}
                     <br />

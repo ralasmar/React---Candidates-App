@@ -29,9 +29,28 @@ body {
     color: black;
 }
 
-.home-image {
-    width: 100%;
+.home-display {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
 
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100vh;
+    width: 350px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    font-family: 'Karla', sans-serif;
+    box-shadow: 8px 8px 4px 2px rgba(0, 0, 255, .2);  
 }
 
 label{
@@ -119,7 +138,7 @@ form.dark{
 
 .form-and-list{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     flex-direction: row;
 }
@@ -347,4 +366,33 @@ nav.dark .toggler--slider {
     height: 10px;
     justify-content: center;
     margin-top: 15px;
+}
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 10px;
+}
+
+.profile-name {
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    margin-top: 10px;
+}
+
+.profile-location {
+    margin-bottom: 0px;
+}
+
+.profile-level {
+    margin-bottom: 0px;
+}
+
+.profile-skills {
+    margin-top: 0px;
 }

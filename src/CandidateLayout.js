@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from "react"
-import { Link, Outlet, useOutletContext, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Navbar } from "./components/Navbar"
-import { CandidateRoutes } from "./CandidateRoutes"
-import { CandidateList } from "./components/CandidateList"
-import { CandidateCard } from "./components/CandidateCard"
-import { Candidates } from "./pages/Candidates"
+
 
 export function CandidateLayout(props){
-    const { id, name } = useParams()
+    const { id } = useParams()
     const [candidate, setCandidate] = useState(null)
 
-    console.log(id)
     useEffect(() => {
         const fetchCandidateData = async () => {
             try {
-                const response = await fetch(`/candidates/${id}`)
-                if(!response.ok){
-                    throw new Error("Error")
-                }
-                const data = await response.json()
-                setCandidate(data)
+                const response = JSON.parse(window.localStorage.getItem("CANDIDATES"))
+                const index =  response.findIndex(candidate => id === candidate.id)
+                
+                setCandidate(response[index])
             } catch (error){
                 console.error("error fetching data", error)
             }
@@ -33,12 +27,12 @@ export function CandidateLayout(props){
         <h1 className="profile-heading">Candidate Profile</h1>
         <Navbar darkMode={props.darkMode} toggleDarkMode={props.toggleDarkMode} />
         {candidate && (
-            <section key={id}>
-            <strong>{candidate.name.name}</strong>
-            Location: {candidate.name.location}
-            Bio: {candidate.name.bio}
-            Skills: {candidate.name.skills}
-            Level: {candidate.name.expertise}
+        <section className="profile-page" key={id}>
+            <strong className="profile-name">{candidate.name.name}</strong>
+            <p className="profile-location">Location: {candidate.name.location}</p>
+            <p classname="profile-level">Level: {candidate.name.expertise}</p>
+            <p className="proile-skills">Skills: {candidate.name.skills}</p>
+            <p className="profile-bio">Bio: {candidate.name.bio}</p>
         </section>
         )}
         
