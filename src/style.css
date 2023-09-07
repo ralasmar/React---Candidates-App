@@ -405,3 +405,12 @@ div.dark {
 .profile-skills {
     margin-top: 0px;
 }
+
+.pagination {
+    position: fixed;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+}
+

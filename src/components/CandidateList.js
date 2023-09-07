@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export function CandidateList(props){
     
     const [currentPage, setCurrentPage] = useState(1)
-    const candidatesPerPage = 9;
+    const candidatesPerPage = 6;
 
     const startIndex = (currentPage - 1) * candidatesPerPage;
     const endIndex = startIndex + candidatesPerPage
@@ -39,6 +39,7 @@ export function CandidateList(props){
                 count={Math.ceil(props.candidates.length / candidatesPerPage)}
                 page={currentPage}
                 onChange={handlePageChange}
+                className="pagination"
             />
         </main>
         </>
