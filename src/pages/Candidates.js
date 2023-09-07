@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Routes } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { CandidateForm } from '../components/CandidateForm'
 import { CandidateList } from '../components/CandidateList'
-import { CandidateRoutes } from '../CandidateRoutes'
 import { CandidateLayout } from '../CandidateLayout'
 import { Searchbar } from '../components/Searchbar'
+import { Pagination } from '../Pagination'
+import axios from "axios"
 
 export function Candidates(props){
     const [darkMode, setDarkMode] = React.useState(false)
@@ -13,6 +14,7 @@ export function Candidates(props){
     function toggleDarkMode(){
         setDarkMode(prevMode => !prevMode)
     }
+
 
     const [candidates, setCandidates] = useState(() => {
         const localValue = localStorage.getItem("CANDIDATES")
@@ -44,6 +46,7 @@ export function Candidates(props){
         alert("Candidate removed from database")
     }
 
+    
     return (
         <>
             <h1 className="candidates-heading">Candidates</h1>
@@ -56,9 +59,7 @@ export function Candidates(props){
                     <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
                 </div>
             </div>
-            {/* <Routes>
-                <Route path="/candidates/:id" element={<CandidateLayout />} />
-            </Routes> */}
+           
         </>
     ) 
     
