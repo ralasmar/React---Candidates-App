@@ -415,10 +415,22 @@ div.dark {
 }
 
 .popover{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 150px;
+    width: 250px;
+    margin: 20px;
+    margin-bottom: 5px;
     
-    width: 800px;
-    height:400px;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
 }
+
 /* .modal{
     display: none;
     z-index: 1;
@@ -435,3 +447,4 @@ div.dark {
     border: 1px solid white;
     width: 80%;
 } */
+
