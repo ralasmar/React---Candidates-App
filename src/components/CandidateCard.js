@@ -3,6 +3,7 @@ import { Link, Route, Routes, useOutletContext } from "react-router-dom"
 import { CandidateLayout } from "../CandidateLayout"
 import { Popover } from '@mui/material'
 import { Typography } from "@mui/material";
+import { motion } from 'framer-motion';
 
 
 export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
@@ -24,8 +25,9 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
     return (
         <section key={id}>
             <Link to={`/candidates/${id}/`}>
-                <div className="candidate-card"
+                <motion.div className="candidate-card"
                      onMouseOver={MouseOver}
+                     animate={{rotateZ:360}}
                 >
                     <section className="candidate-name">
                         <strong >{name}</strong>
@@ -35,7 +37,7 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                     Skills: {skills}
                     <br />
                     Level: {expertise}
-                </div>
+                </motion.div>
             
                 {open && (
                     <div>
