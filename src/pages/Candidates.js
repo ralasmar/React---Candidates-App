@@ -46,6 +46,16 @@ export function Candidates(props){
         alert("Candidate removed from database")
     }
 
+    function sortByName(){
+        const sortedNames = [...candidates].sort((a,b) => a.name.name.localeCompare(b.name.name))
+        console.log(sortedNames)
+        setCandidates(sortedNames)
+    }
+
+    function sortByLocation(){
+        const sortedNames = [...candidates].sort((a,b) => a.name.location.localeCompare(b.name.location))
+        setCandidates(sortedNames)
+    }
     
     return (
         <>
@@ -56,6 +66,10 @@ export function Candidates(props){
                 <CandidateForm onSubmit={addCandidate} darkMode={darkMode}/>
                 <div className="list-and-search">
                     <Searchbar darkMode={darkMode} onSearchResults={setCandidates} />
+                    <ul>
+                        Sort by: <button type="submit" onClick={sortByName}>Name</button>
+                        <button type="submit" onClick={sortByLocation}>Location</button>
+                     </ul>
                     <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
                 </div>
             </div>

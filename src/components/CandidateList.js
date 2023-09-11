@@ -12,12 +12,28 @@ export function CandidateList(props){
 
     const currentCandidates = props.candidates.slice(startIndex, endIndex)
 
+    // const [candidates, setCandidates] = useState(
+    //     JSON.parse(window.localStorage.getItem("CANDIDATES")) || []
+    //     )
+   
     const handlePageChange =(event, newPage) => {
         setCurrentPage(newPage)
     }
+
+    // function sortByName(){
+    //     const sortedNames = [...candidates].sort((a,b) => a.name.name.localeCompare(b.name))
+    //     console.log(sortedNames)
+    //     setCandidates(sortedNames)
+    // }
+
+
     return (
         <>
         <main className={props.darkMode ? "dark": ""}>
+            {/* <ul>
+                Sort by: <button type="submit" onClick={sortByName}>Name</button>
+                <button>Location</button>
+            </ul> */}
             <section className="card-area">
                 {currentCandidates.length === 0 && "No Candidates Available"}
                 {currentCandidates.map(candidate => {

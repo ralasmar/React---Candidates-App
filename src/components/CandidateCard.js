@@ -27,7 +27,9 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
             <Link to={`/candidates/${id}/`}>
                 <motion.div className="candidate-card"
                      onMouseOver={MouseOver}
-                     animate={{rotateZ:360}}
+                     initial={{opacity: 0}}
+                     animate={{opacity: 1}}
+                    //  transition={{delay: 0.2}}
                 >
                     <section className="candidate-name">
                         <strong >{name}</strong>
