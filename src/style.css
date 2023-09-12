@@ -163,6 +163,7 @@ form.dark{
     height: 200px;
     width: 345px;
     margin: 20px;
+    margin-top: 0px;
     margin-bottom: 5px;
     border-radius: 20px;
     cursor: pointer;
@@ -223,7 +224,6 @@ form.dark{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
 main.dark{
@@ -270,7 +270,6 @@ nav {
     display: flex;
     float: left;
 }
-
 
 nav.dark {
     background-color: black;
@@ -321,9 +320,7 @@ nav.dark .toggler--slider {
 .search {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-    
+    justify-content: center;  
 }
 
 #search-bar {
@@ -439,6 +436,10 @@ div.dark {
     margin-bottom: 5px;
     cursor: pointer;
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
+}
+
+#mouse-over-popover{
+    margin-top: 0px;
 }
 
 

@@ -70,7 +70,7 @@ export function Candidates(props){
                         Sort by: <button className='sort-btn' type="submit" onClick={sortByName}>Name</button>
                         <button className='sort-btn' type="submit" onClick={sortByLocation}>Location</button>
                      </ul>
-                    <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode} />
+                    <CandidateList candidates={candidates} deleteCandidate={deleteCandidate} darkMode={darkMode}  />
                 </div>
             </div>
            
