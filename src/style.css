@@ -430,7 +430,7 @@ div.dark {
     align-items: center;
     background-color: red;
     color: white;
-    height: 150px;
+    /* height: 150px; */
     width: 250px;
     margin: 20px;
     margin-bottom: 5px;
@@ -438,8 +438,8 @@ div.dark {
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
 }
 
-#mouse-over-popover{
-    margin-top: 0px;
-}
+/* .mouse-over-popover{
+    margin-top: 20px;
+} */
 
 

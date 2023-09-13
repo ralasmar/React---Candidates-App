@@ -4,6 +4,7 @@ import { CandidateLayout } from "../CandidateLayout"
 import { Popover } from '@mui/material'
 import { Typography } from "@mui/material";
 import { motion } from 'framer-motion';
+import "../style.css"
 
 
 export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
@@ -58,11 +59,15 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                     <div>
                         
                         <Popover
-                            id="mouse-over-popover"
+                           
+                            className="mouse-over-popover"
                             //styling properties
                             sx={{
                                 //allows interactions with elements beneath the popover
-                                PointerEvents: 'none'
+                                // pointerEvents: 'none',
+                                maxHeight: "150px",
+
+                              
                             }}
                             open={open}
                             //anchor element the popover is attached to, updated based on mouse events
@@ -84,6 +89,10 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                                 className="popover"
                                 aria-owns={open ? 'mouse-over-popover' : undefined}
                                 aria-haspopup="true"
+                                sx = {{
+                                    
+                                    
+                                }}
                                 
                             >Bio: {bio}
                             </Typography>
