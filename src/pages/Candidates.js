@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Route, Routes } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { CandidateForm } from '../components/CandidateForm'
 import { CandidateList } from '../components/CandidateList'
-import { CandidateLayout } from '../CandidateLayout'
 import { Searchbar } from '../components/Searchbar'
-import { Pagination } from '../Pagination'
-import axios from "axios"
 
 export function Candidates(props){
     const [darkMode, setDarkMode] = React.useState(false)
@@ -24,10 +20,10 @@ export function Candidates(props){
         return JSON.parse(localValue)
     })
 
-    function addCandidate(name, location, bio, skills, expertise){
+    const addCandidate = (name, photo, location, bio, skills, expertise) => {
         setCandidates(currentCandidates => {
             const newCandidates = [
-                { id: crypto.randomUUID(), name, location, bio, skills, expertise },
+                { id: crypto.randomUUID(), name, photo, location, bio, skills, expertise },
                 ...currentCandidates
             ]
             localStorage.setItem("CANDIDATES", JSON.stringify(newCandidates))
@@ -36,7 +32,7 @@ export function Candidates(props){
         alert("New Candidate Added")
     }
 
-    function deleteCandidate(id){
+    const deleteCandidate = (id) => {
         setCandidates(currentCandidates => {
             const updatedCandidates = currentCandidates.filter(candidate => candidate.id !== id)
 
@@ -46,13 +42,13 @@ export function Candidates(props){
         alert("Candidate removed from database")
     }
 
-    function sortByName(){
+    const sortByName = () => {
         const sortedNames = [...candidates].sort((a,b) => a.name.name.localeCompare(b.name.name))
         console.log(sortedNames)
         setCandidates(sortedNames)
     }
 
-    function sortByLocation(){
+    const sortByLocation = () => {
         const sortedNames = [...candidates].sort((a,b) => a.name.location.localeCompare(b.name.location))
         setCandidates(sortedNames)
     }

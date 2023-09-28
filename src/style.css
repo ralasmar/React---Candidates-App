@@ -96,6 +96,14 @@ form.dark{
     border-radius: 8px;
 }
 
+.form-photo{
+    margin: 10px;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    border-radius: 8px;
+}
+
 .form-location{
     margin: 10px;
     align-items: center;
@@ -269,6 +277,7 @@ nav {
 .nav-link{
     display: flex;
     float: left;
+    margin: 10px;
 }
 
 nav.dark {
@@ -325,6 +334,8 @@ nav.dark .toggler--slider {
 
 #search-bar {
     display: flex;
+    flex-direction: 'row';
+    margin: 4px;
     justify-content: left;
     padding-bottom: 20px;
     padding-top: 10px;
@@ -400,6 +411,11 @@ div.dark {
     font-family: 'Karla', sans-serif;
     color: white;
     margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.profile-pic {
+    width: 400px;
 }
 
 .profile-location {
@@ -438,8 +454,6 @@ div.dark {
     box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, .2);
 }
 
-/* .mouse-over-popover{
-    margin-top: 20px;
-} */
-
-
+.mouse-over-popover {
+    max-height: 150px;
+}

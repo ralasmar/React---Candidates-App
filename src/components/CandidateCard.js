@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import "../style.css"
 
 
-export function CandidateCard({id, name, location, bio, skills, expertise, deleteCandidate}){
+export function CandidateCard({id, name, photo, location, bio, skills, expertise, deleteCandidate}){
     
     //state to manage anchor element for popover
     const [anchorEl, setAnchorEl] = useState(null)
@@ -22,32 +22,19 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
     //boolean to check if the popover is open
     const open = Boolean(anchorEl)
 
-    //framer motion 
-    const containerVariants = {
-        hidden: {
-            x: '-100vw'
-        },
-        visible: {
-            x: 0,
-            transition: { type: 'spring', stiffness: 80}
-        }
-    }
-    
     return (
         <section key={id}>
             <Link to={`/candidates/${id}/`}>
                 <motion.div className="candidate-card"
                      onMouseOver={MouseOver}
-                     variants={containerVariants}
-                     initial="hidden"
-                     animate="visible"
-                    //  initial={{opacity: 0}}
-                    //  animate={{opacity: 1}}
-                    //  transition={{delay: 0.2}}
+                     initial={{opacity: 0}}
+                     animate={{opacity: 1}}
+                     transition={{delay: 0.1}}
                 >
                     <section className="candidate-name">
-                        <strong >{name}</strong>
+                        {name}
                     </section>
+                    {photo}
                     Location: {location}
                     <br />
                     Skills: {skills}
@@ -61,14 +48,7 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                         <Popover
                            
                             className="mouse-over-popover"
-                            //styling properties
-                            sx={{
-                                //allows interactions with elements beneath the popover
-                                // pointerEvents: 'none',
-                                maxHeight: "150px",
-
-                              
-                            }}
+                        
                             open={open}
                             //anchor element the popover is attached to, updated based on mouse events
                             anchorEl={anchorEl}
@@ -88,12 +68,7 @@ export function CandidateCard({id, name, location, bio, skills, expertise, delet
                             <Typography 
                                 className="popover"
                                 aria-owns={open ? 'mouse-over-popover' : undefined}
-                                aria-haspopup="true"
-                                sx = {{
-                                    
-                                    
-                                }}
-                                
+                                aria-haspopup="true"  
                             >Bio: {bio}
                             </Typography>
                         </Popover>

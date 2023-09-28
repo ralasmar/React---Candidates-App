@@ -30,6 +30,7 @@ export function CandidateLayout(props){
         <div className={props.darkMode ? "dark": ""}>
             <section className="profile-page" key={id}>
                 <strong className="profile-name">{candidate.name.name}</strong>
+                <img className="profile-pic" src={candidate.name.photo}></img>
                 <p className="profile-location"><strong>Location:</strong> {candidate.name.location}</p>
                 <p classname="profile-level"><strong>Level:</strong> {candidate.name.expertise}</p>
                 <p className="proile-skills"><strong>Skills:</strong> {candidate.name.skills}</p>

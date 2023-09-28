@@ -1,14 +1,5 @@
 import React from 'react'
 
-// export function Pagination({ goToNextPage, goToPreviousPage }){
-//     return (
-//         //check if there is a prev/next page and if so display button
-//         <div>
-//             {goToPreviousPage && <button onClick={goToPreviousPage}>Previous</button>}
-//             {goToNextPage && <button onClick={goToNextPage}>Next</button>}
-//         </div>
-//     )
-// }
 
 function Pagination(props) {
     return (
